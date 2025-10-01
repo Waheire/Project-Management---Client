@@ -1,11 +1,14 @@
 import API from "./axios-client";
-import { CurrentUserResponseType } from "@/types/api.type";
+import { CurrentUserResponseType, LoginResponseType, loginType } from "@/types/api.type";
 
-export const loginMutationFn = async () => {};
+export const loginMutationFn = async (data: loginType): Promise<LoginResponseType> => {
+  const response = await API.post("/auth/login", data);
+  return response.data
+};
 
-export const registerMutationFn = async () => {};
+export const registerMutationFn = async () => { };
 
-export const logoutMutationFn = async () => {};
+export const logoutMutationFn = async () => { };
 
 export const getCurrentUserQueryFn =
   async (): Promise<CurrentUserResponseType> => {
@@ -16,43 +19,43 @@ export const getCurrentUserQueryFn =
 //********* WORKSPACE ****************
 //************* */
 
-export const createWorkspaceMutationFn = async () => {};
+export const createWorkspaceMutationFn = async () => { };
 
-export const editWorkspaceMutationFn = async () => {};
+export const editWorkspaceMutationFn = async () => { };
 
-export const getWorkspaceByIdQueryFn = async () => {};
+export const getWorkspaceByIdQueryFn = async () => { };
 
-export const getAllWorkspacesUserIsMemberQueryFn = () => {};
+export const getAllWorkspacesUserIsMemberQueryFn = () => { };
 
-export const getWorkspaceAnalyticsQueryFn = async () => {};
+export const getWorkspaceAnalyticsQueryFn = async () => { };
 
-export const changeWorkspaceMemberRoleMutationFn = async () => {};
+export const changeWorkspaceMemberRoleMutationFn = async () => { };
 
-export const deleteWorkspaceMutationFn = async () => {};
+export const deleteWorkspaceMutationFn = async () => { };
 
 //*******MEMBER ****************
 
-export const invitedUserJoinWorkspaceMutationFn = async () => {};
+export const invitedUserJoinWorkspaceMutationFn = async () => { };
 
 //********* */
 //********* PROJECTS
-export const createProjectMutationFn = async () => {};
+export const createProjectMutationFn = async () => { };
 
-export const editProjectMutationFn = async () => {};
+export const editProjectMutationFn = async () => { };
 
-export const getProjectsInWorkspaceQueryFn = async () => {};
+export const getProjectsInWorkspaceQueryFn = async () => { };
 
-export const getProjectByIdQueryFn = async () => {};
+export const getProjectByIdQueryFn = async () => { };
 
-export const getProjectAnalyticsQueryFn = async () => {};
+export const getProjectAnalyticsQueryFn = async () => { };
 
-export const deleteProjectMutationFn = async () => {};
+export const deleteProjectMutationFn = async () => { };
 
 //*******TASKS ********************************
 //************************* */
 
-export const createTaskMutationFn = async () => {};
+export const createTaskMutationFn = async () => { };
 
-export const getAllTasksQueryFn = async () => {};
+export const getAllTasksQueryFn = async () => { };
 
-export const deleteTaskMutationFn = async () => {};
+export const deleteTaskMutationFn = async () => { };
